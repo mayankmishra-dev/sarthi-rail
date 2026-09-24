@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sarthi Rail — Book a journey</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand"><span class="mark">✦</span> Sarthi Rail</div>
+  <div class="user-chip">
+    <span id="userName"></span>
+    <button id="logoutBtn">Log out</button>
+  </div>
+</div>
+
+<div class="page">
+
+  <div class="tabs">
+    <button class="active" id="tabSearch">Book a train</button>
+    <button id="tabBookings">My bookings</button>
+  </div>
+
+  <!-- SEARCH + RESULTS -->
+  <div id="searchSection">
+    <div class="search-panel">
+      <div class="field">
+        <label for="fromInput">From</label>
+        <input type="text" id="fromInput" placeholder="e.g. Lucknow">
+      </div>
+      <div class="field">
+        <label for="toInput">To</label>
+        <input type="text" id="toInput" placeholder="e.g. Delhi">
+      </div>
+      <div class="field">
+        <label for="dateInput">Date of journey</label>
+        <input type="date" id="dateInput">
+      </div>
+      <button class="btn btn-primary" id="searchBtn" style="width:auto;">Search trains</button>
+    </div>
+
+    <section class="results">
+      <h2 id="resultsHeading">All trains</h2>
+      <div id="trainList"></div>
+    </section>
+  </div>
+
+  <!-- MY BOOKINGS -->
+  <div id="bookingsSection" style="display:none;">
+    <div id="bookingsList"></div>
+  </div>
+
+</div>
+
+<!-- BOOKING MODAL -->
+<div class="overlay" id="bookingOverlay">
+  <div class="modal" id="bookingModal"></div>
+</div>
+
+<script src="js/dashboard.js"></script>
+</body>
+</html>
